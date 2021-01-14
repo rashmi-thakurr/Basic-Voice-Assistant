@@ -51,8 +51,8 @@ def sendEmail(to,content):
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login("rashmi.lata151@gmail.com",'ankrash123')
-    server.sendmail('rashmi.lata151@gmail.com',to,content)
+    server.login("youremail@gmail.com",'yourpassword')
+    server.sendmail('youremail@gmail.com',to,content)
     server.close()
     
 if __name__ == "__main__":
@@ -108,16 +108,16 @@ if __name__ == "__main__":
             codePath = "C:\\Users\\RASHMI\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
 
-        elif "send email to Rashmi" in query:
+        elif "send email to abc" in query:
             try:
                 speak("What should i say?")
                 content = takeCommand()
-                to = "rashmi.lata151@gmail.com"
+                to = "abc@gmail.com"
                 sendEmail(to,content)
                 speak("The email has been sent")
             except Exception as e:
                 print(e)
-                speak("Sorry Rashmi! I am not able to sent this email")
+                speak("Sorry Ma'am! I am not able to sent this email")
 
         elif "exit" in query:
             exit()
